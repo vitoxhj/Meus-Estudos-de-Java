@@ -4,9 +4,9 @@ import java.util.Scanner;
 public class SistemaDeNotas {
     public static void main(String[] args) {
         // Sistema de notas
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite a quantidade de alunos");
-        int quant = scanner.nextInt();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Digite a quantidade de alunos");
+            int quant = scanner.nextInt();
 
         double[] notas = new double[quant];
 
@@ -57,6 +57,6 @@ public class SistemaDeNotas {
         System.out.println("Recuperação: "+recup);
         System.out.println("Reprovados: "+reproved);
 
-        scanner.close();
+        }
     }
 }
