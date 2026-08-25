@@ -1,10 +1,10 @@
 package estudosJava.javacore.Bintroduçãometodos.domain;
 
 public class Funcionario {
-    public String name;
-    public int age;
-    public double[] salarys;
-
+    private String name;
+    private int age;
+    private double[] salarys;
+    private double media = 0;
     public void imprime(){
         System.out.println("\n---------------------------------");
         System.out.println("Nome: "+this.name);
@@ -18,14 +18,38 @@ public class Funcionario {
 
     }
     public void media(){
-        double media = 0;
+        
         for (double num: this.salarys){
-            media += num;
+            this.media += num;
         }
-        double result = media / 3;
+        double result = this.media / 3;
         System.out.println();
         System.out.println("A média salária de "+this.name+" é R$"+result);
         System.out.println("-------------------------------------");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double[] getSalarys() {
+        return salarys;
+    }
+
+    public void setSalarys(double[] salarys) {
+        this.salarys = salarys;
     }
     
 }

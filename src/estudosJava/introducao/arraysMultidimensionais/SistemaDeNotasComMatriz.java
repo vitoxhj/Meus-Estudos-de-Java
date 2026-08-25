@@ -15,16 +15,15 @@ public class SistemaDeNotasComMatriz {
         double[] mediasArray = new double[quant];
         int countnotas;
         int countalunos = 0;
-        for (int i = 0; i < notas.length; i++) {
-            countalunos++;
-            countnotas = 0;
-            for (int j = 0; j < notas[i].length; j++) {
-                countnotas++;
-                System.out.println("Coloque a nota "+countnotas+" do aluno "+countalunos+": ");
-                notas[i][j] = scanner.nextDouble();  
+            for (double[] nota : notas) {
+                countalunos++;
+                countnotas = 0;
+                for (int j = 0; j < nota.length; j++) {
+                    countnotas++;
+                    System.out.println("Coloque a nota "+countnotas+" do aluno "+countalunos+": ");
+                    nota[j] = scanner.nextDouble();  
+                }
             }
-            
-        }
 
         double media = 0;
         int approved = 0;

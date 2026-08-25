@@ -29,20 +29,21 @@ public class CampoMinado {
         System.out.println();
         int collumLength = camp.length;
         int lineLenght = camp[0].length;
-        Scanner input = new Scanner(System.in);
-        System.out.println("===================");
-        System.out.println("Escolha uma linha");
-        int line = input.nextInt();
-        System.out.println("Escolha uma coluna");
-        int collum = input.nextInt();
-        if ((collum > collumLength || collum > collumLength) || (line > lineLenght || line > lineLenght)){
-            System.out.println("Linha ou coluna inexistente");
-        }else{
-            char casa = camp[line - 1][collum - 1];
-            if (casa == 'B'){
-                System.out.println("BOOM!Você encontrou uma bomba");
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.println("===================");
+            System.out.println("Escolha uma linha");
+            int line = input.nextInt();
+            System.out.println("Escolha uma coluna");
+            int collum = input.nextInt();
+            if ((collum > collumLength || collum > collumLength) || (line > lineLenght || line > lineLenght)){
+                System.out.println("Linha ou coluna inexistente");
             }else{
-                System.out.println("Casa livre!");
+                char casa = camp[line - 1][collum - 1];
+                if (casa == 'B'){
+                    System.out.println("BOOM!Você encontrou uma bomba");
+                }else{
+                    System.out.println("Casa livre!");
+                }
             }
         }
         System.out.println("\n    1c 2c 3c 4c 5c");
