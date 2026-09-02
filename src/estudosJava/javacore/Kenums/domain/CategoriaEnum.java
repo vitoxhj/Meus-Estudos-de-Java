@@ -1,5 +1,10 @@
 package estudosJava.javacore.Kenums.domain;
 
 public enum CategoriaEnum {
-    ELETRONICO, ALIMENTO, ROUPA, MOVEIS
+    ELETRONICO,
+    ALIMENTO, 
+    ROUPA, 
+    MOVEIS, 
+    BEBIDA, 
+    LIMPEZA;
 }
